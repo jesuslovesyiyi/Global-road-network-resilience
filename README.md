@@ -1,6 +1,6 @@
 # A global evaluation of flood impacts on road networks informs resilience investments
 
-**Our team:**<br>
+## Our team:s
 Yiyi He, Georgia Tech<br>
 Jun Rentschler, The World Bank<br>
 Paolo Avner, The World Bank<br>
