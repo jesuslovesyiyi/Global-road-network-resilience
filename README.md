@@ -28,6 +28,8 @@ In this study, we provide the first global evaluation of direct and, more import
 In sum, the study has its genesis rooted in publications in this journal, warranting a broad impact among audiences in the academic fields, policy-makers, governments, and beyond. The paper will fundamentally enrich the tools scientists and engineers use to approach infrastructure resilience to natural disasters.
 
 ## Datasets we used in this study:
-### Fathom Global flood maps
-### Open Street Map
+### [Open Street Map](https://www.openstreetmap.org/about)
+### [Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)
+To understand the exposure of road networks to floods, we use the latest high-resolution (90 meters) pluvial and fluvial flood map products (in raster spatial data format) for 10 flood return periods (5, 10, 20, 50, 75, 100, 200, 250, 500, 1000) from Fathom. 
+
 ### GHS
