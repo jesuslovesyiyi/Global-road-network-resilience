@@ -29,7 +29,14 @@ In sum, the study has its genesis rooted in publications in this journal, warran
 
 ## Datasets we used in this study:
 ### [Open Street Map](https://www.openstreetmap.org/about)
+OSM provides a free, openly licensed, volunteer-contributed repository of geographic information with a focus on streets and roads.  As of April 2025, approximately 10 million contributors had created this database with more than 1.1 billion roads, coastlines, administrative boundaries, and other linear features known as “ways”. We extract road networks from the OSM dataset using convex hulls created from settlement cluster boundaries as spatial masks.<br>
+- [Link to convex hull shapefiles](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EvtNqtLsG4NCkmuVP5BiWQEBCziGzccC8H_YrrD5Pl_jIA?e=eviyhQ)
+
 ### [Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)
 To understand the exposure of road networks to floods, we use the latest high-resolution (90 meters) pluvial and fluvial flood map products (in raster spatial data format) for 10 flood return periods (5, 10, 20, 50, 75, 100, 200, 250, 500, 1000) from Fathom. 
 
-### GHS
+### [GHS Global Human Settlement Layer](https://human-settlement.emergency.copernicus.eu/ghs_smod2023.php)
+The global human settlement model grid (GHS-SMOD) dataset developed and maintained by the European Commission provides a validated and complete representation of the spatial distribution of the population with global coverage. Specifically, it delineates and classifies 1x1 km grid cell into eight settlement classes defined based on population size and built-up area densities, thus refining Eurostat’s “degree of urbanization” method. These settlement typologies include water (class 10), very low-density rural (class 11), low-density rural (class 12), rural cluster (class 13), suburban or peri-urban (class 21), semi-dense urban cluster (class 22), dense urban cluster (class 23), urban center (class 30). We leverage this dataset to We extract boundaries for a total of 2,564 settlement clusters worldwide.
+
+### [GHS Global Population Layer](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)
+The spatial raster dataset depicts the distribution of residential population, expressed as the number of people per cell. We use the clusters’ spatial boundaries as spatial masks in the extraction process and apply the min-max scaler to the resulting population raster. By doing so, all headcount values from the original GHS-POP raster are transformed into the range [0, 1]. In the simulation process, OD points are sampled based on the normalized population raster. Pixels with a higher population count will therefore have a higher chance of housing an origin or destination point location.
