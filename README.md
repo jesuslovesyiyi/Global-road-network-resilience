@@ -30,8 +30,6 @@ In sum, the study has its genesis rooted in publications in this journal, warran
 ## Datasets we used in this study:
 ### [Open Street Map](https://www.openstreetmap.org/about)
 OSM provides a free, openly licensed, volunteer-contributed repository of geographic information with a focus on streets and roads.  As of April 2025, approximately 10 million contributors had created this database with more than 1.1 billion roads, coastlines, administrative boundaries, and other linear features known as “ways”. We extract road networks from the OSM dataset using convex hulls created from settlement cluster boundaries as spatial masks.<br>
-- [Link to convex hull shapefiles](https://gtvault-my.sharepoint.com/:u:/g/personal/yhe603_gatech_edu/ETlCkJouV3pAuvyK2uDrrocB0JLp3xN8rMQE_Xw4UGmeCA?e=taihIh)
-- [Link to 8 giant cluster boundaries](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EoHOMkLaV7FHkBjO9yjBADMBHQggpKLnjNgmXPak-WtW5w?e=VWe6ni)
 
 ### [Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)
 To understand the exposure of road networks to floods, we use the latest high-resolution (90 meters) pluvial and fluvial flood map products (in raster spatial data format) for 10 flood return periods (5, 10, 20, 50, 75, 100, 200, 250, 500, 1000) from Fathom. 
@@ -41,3 +39,8 @@ The global human settlement model grid (GHS-SMOD) dataset developed and maintain
 
 ### [GHS Global Population Grid](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)
 The spatial raster dataset depicts the distribution of residential population, expressed as the number of people per cell. We use the clusters’ spatial boundaries as spatial masks in the extraction process and apply the min-max scaler to the resulting population raster. By doing so, all headcount values from the original GHS-POP raster are transformed into the range [0, 1]. In the simulation process, OD points are sampled based on the normalized population raster. Pixels with a higher population count will therefore have a higher chance of housing an origin or destination point location.
+
+### [Project datasets](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EqT8fsXe8lFCqAlv-F0wrvYBbSk28cIUrIVlhRRU4vf0Iw?e=u1fhx2)
+Below is a list of project datasets. If you have any questions or concerns please email yiyi.he@design.gatech.edu.
+- Convex hull shapefiles (4299 polygons)
+- Eight giant cluster boundaries
