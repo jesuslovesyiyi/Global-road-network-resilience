@@ -40,13 +40,15 @@ The global human settlement model grid (GHS-SMOD) dataset developed and maintain
 ### [GHS Global Population Grid](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)
 The spatial raster dataset depicts the distribution of residential population, expressed as the number of people per cell. We use the clusters’ spatial boundaries as spatial masks in the extraction process and apply the min-max scaler to the resulting population raster. By doing so, all headcount values from the original GHS-POP raster are transformed into the range [0, 1]. In the simulation process, OD points are sampled based on the normalized population raster. Pixels with a higher population count will therefore have a higher chance of housing an origin or destination point location.
 
-### [Project Dataset Repository – OneDrive Access](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EqT8fsXe8lFCqAlv-F0wrvYBbSk28cIUrIVlhRRU4vf0Iw?e=u1fhx2)
+### [Project Dataset Repository – OneDrive Access](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EqT8fsXe8lFCqAlv-F0wrvYBbSk28cIUrIVlhRRU4vf0Iw?e=sl5qOz)
 Click the link above to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
 - Original convex hull shapefiles(4299 polygons) 
-    - Filename: *"4229_bnd_convex"*
+    - Filename: *"4229_bnd_convex.zip"*
 - Eight giant cluster boundaries
-    - Filename: *"Giant_cluster_boundary"*
+    - Folder: *"Giant_cluster_boundary"*
 - Selected convex hull shapefiles (2564 polygons with added attributes: number of simulations, average travel time under dry and 10 wet  conditions)
-    - Filename: *"Convex_2654_avg_travel_time"*
+    - Folder: *"Convex_2654_avg_travel_time"*
 - Routing simulation results (dry condition)
-    - Filename: *"dry_OD_routing"*
+    - Folder: *"dry_OD_routing"*
+- Sampled road networks (35 total) for elevation validation (file format: geopackage)
+    - Filename: *"sampled_network_lite_elev_gpkg.zip"*
