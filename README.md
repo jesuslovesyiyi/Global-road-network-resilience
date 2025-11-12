@@ -35,9 +35,9 @@ OSM provides a free, openly licensed, volunteer-contributed repository of geogra
 
 
 
-<img width="816" height="97" alt="Image" src="https://github.com/user-attachments/assets/f83ca91d-703d-49c0-87af-33923e4b7d4f" /><br>
-**[Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)**
 
+**[Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)**
+<img width="816" height="97" alt="Image" src="https://github.com/user-attachments/assets/f83ca91d-703d-49c0-87af-33923e4b7d4f" /><br>
 
 To understand the exposure of road networks to floods, we use the latest high-resolution (90 meters) pluvial and fluvial flood map products (in raster spatial data format) for 10 flood return periods (5, 10, 20, 50, 75, 100, 200, 250, 500, 1000) from Fathom. 
 
