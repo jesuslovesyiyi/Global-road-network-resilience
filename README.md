@@ -35,7 +35,7 @@ OSM provides a free, openly licensed, volunteer-contributed repository of geogra
 
 
 
-<p style="margin-bottom: -1;">
+<p style="margin-bottom: -100;">
 <img width="816" height="97" alt="Image" src="https://github.com/user-attachments/assets/f83ca91d-703d-49c0-87af-33923e4b7d4f" />
 </p>
 
