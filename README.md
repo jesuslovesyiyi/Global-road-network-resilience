@@ -40,7 +40,9 @@ OSM provides a free, openly licensed, volunteer-contributed repository of geogra
 
 To understand the exposure of road networks to floods, we use the latest high-resolution (90 meters) pluvial and fluvial flood map products (in raster spatial data format) for 10 flood return periods (5, 10, 20, 50, 75, 100, 200, 250, 500, 1000) from Fathom. 
 
-### [GHS Global Human Settlement Layer](https://human-settlement.emergency.copernicus.eu/ghs_smod2023.php)
+**[GHS Global Human Settlement Layer](https://human-settlement.emergency.copernicus.eu/ghs_smod2023.php)**
+![Image](https://github.com/user-attachments/assets/d3ea37cb-849e-40c3-affe-6ed8010487cd)
+
 The global human settlement model grid (GHS-SMOD) dataset developed and maintained by the European Commission provides a validated and complete representation of the spatial distribution of the population with global coverage. Specifically, it delineates and classifies 1x1 km grid cell into eight settlement classes defined based on population size and built-up area densities, thus refining Eurostat’s “degree of urbanization” method. These settlement typologies include water (class 10), very low-density rural (class 11), low-density rural (class 12), rural cluster (class 13), suburban or peri-urban (class 21), semi-dense urban cluster (class 22), dense urban cluster (class 23), urban center (class 30). We leverage this dataset to We extract boundaries for a total of 2,564 settlement clusters worldwide.
 
 ### [GHS Global Population Grid](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)
