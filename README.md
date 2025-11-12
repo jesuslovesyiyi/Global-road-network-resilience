@@ -33,9 +33,13 @@ In sum, the study has its genesis rooted in publications in this journal, warran
 ### [Open Street Map](https://www.openstreetmap.org/about)
 OSM provides a free, openly licensed, volunteer-contributed repository of geographic information with a focus on streets and roads.  As of April 2025, approximately 10 million contributors had created this database with more than 1.1 billion roads, coastlines, administrative boundaries, and other linear features known as “ways”. We extract road networks from the OSM dataset using convex hulls created from settlement cluster boundaries as spatial masks.<br>
 
-<img width="816" height="97" alt="Image" src="https://github.com/user-attachments/assets/f83ca91d-703d-49c0-87af-33923e4b7d4f" />
 
-![Image](https://github.com/user-attachments/assets/1a2aa218-49ef-4677-a76e-75a218b3fe92)<br>
+
+<p style="margin-bottom: 0;">
+<img width="816" height="97" alt="Image" src="https://github.com/user-attachments/assets/f83ca91d-703d-49c0-87af-33923e4b7d4f" />
+</p>
+<p style="margin-top: 0;">This text is close to the image.</p>
+
 ### [Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)
 
 
