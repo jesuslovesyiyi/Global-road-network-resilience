@@ -33,11 +33,8 @@ In sum, the study has its genesis rooted in publications in this journal, warran
 ### [Open Street Map](https://www.openstreetmap.org/about)
 OSM provides a free, openly licensed, volunteer-contributed repository of geographic information with a focus on streets and roads.  As of April 2025, approximately 10 million contributors had created this database with more than 1.1 billion roads, coastlines, administrative boundaries, and other linear features known as “ways”. We extract road networks from the OSM dataset using convex hulls created from settlement cluster boundaries as spatial masks.<br>
 
-
-
-
 **[Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)**
-<img width="816" height="97" alt="Image" src="https://github.com/user-attachments/assets/f83ca91d-703d-49c0-87af-33923e4b7d4f" /><br>
+<img width="1280" height="128" alt="Image" src="https://github.com/user-attachments/assets/c7a649f4-0d8f-4e2f-a385-160fc4302f6b" /><br>
 
 To understand the exposure of road networks to floods, we use the latest high-resolution (90 meters) pluvial and fluvial flood map products (in raster spatial data format) for 10 flood return periods (5, 10, 20, 50, 75, 100, 200, 250, 500, 1000) from Fathom. 
 
