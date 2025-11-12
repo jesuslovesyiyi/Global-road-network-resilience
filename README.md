@@ -30,7 +30,9 @@ In this study, we provide the first global evaluation of direct and, more import
 In sum, the study has its genesis rooted in publications in this journal, warranting a broad impact among audiences in the academic fields, policy-makers, governments, and beyond. The paper will fundamentally enrich the tools scientists and engineers use to approach infrastructure resilience to natural disasters.
 
 ## Datasets we used in this study:
-### [Open Street Map](https://www.openstreetmap.org/about)
+**[Open Street Map](https://www.openstreetmap.org/about)**
+![Image](https://github.com/user-attachments/assets/8d024683-56b9-4229-9863-348ee0cb17c6)
+
 OSM provides a free, openly licensed, volunteer-contributed repository of geographic information with a focus on streets and roads.  As of April 2025, approximately 10 million contributors had created this database with more than 1.1 billion roads, coastlines, administrative boundaries, and other linear features known as “ways”. We extract road networks from the OSM dataset using convex hulls created from settlement cluster boundaries as spatial masks.<br>
 
 **[Fathom Global flood maps](https://www.fathom.global/product/global-flood-map/)**
