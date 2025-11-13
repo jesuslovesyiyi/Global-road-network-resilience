@@ -27,8 +27,6 @@ In this study, we provide the first global evaluation of direct and, more import
 
 3.	We pinpoint three underlying drivers: <ins>exposure</ins>, <ins>connectivity</ins>, and <ins>travel pattern</ins> that influence the resilience of road networks based on global data. The result facilitates the development of <ins>region-specific</ins> hazard mitigation objectives and investigation plans, effectively reducing the indirect repercussions of floods.
 
-In sum, the study has its genesis rooted in publications in this journal, warranting a broad impact among audiences in the academic fields, policy-makers, governments, and beyond. The paper will fundamentally enrich the tools scientists and engineers use to approach infrastructure resilience to natural disasters.
-
 ## Datasets we used in this study:
 ### Open Street Map
 ![Image](https://github.com/user-attachments/assets/8d024683-56b9-4229-9863-348ee0cb17c6)
