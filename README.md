@@ -8,7 +8,7 @@
 - [Research Gap](#research-gaps-that-we-found)
 - [Our Contribution](#our-contribution)
 - [Datasets](#datasets-we-used-in-this-study)
-- [Project Database](#project-dataset-repository--onedrive-access)
+- [Project Database](#project-database--onedrive-access)
 
 ## Our team:
 Yiyi He, Georgia Tech<br>
@@ -60,7 +60,7 @@ The global human settlement model grid (GHS-SMOD) dataset developed and maintain
 The spatial raster dataset depicts the distribution of residential population, expressed as the number of people per cell. We use the clusters’ spatial boundaries as spatial masks in the extraction process and apply the min-max scaler to the resulting population raster. By doing so, all headcount values from the original GHS-POP raster are transformed into the range [0, 1]. In the simulation process, OD points are sampled based on the normalized population raster. Pixels with a higher population count will therefore have a higher chance of housing an origin or destination point location.<br>
 [[Read more]](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)<br>
 
-## Project Dataset Repository – OneDrive Access
+## Project Database – OneDrive Access
 [Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EqT8fsXe8lFCqAlv-F0wrvYBbSk28cIUrIVlhRRU4vf0Iw?e=sl5qOz) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
 1. Original convex hull shapefiles(4299 polygons) 
     - Filename: *"4229_bnd_convex.zip"*
