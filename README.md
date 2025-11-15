@@ -2,6 +2,14 @@
 
 ![github profile img](supplementary/github_project_img.png)
 
+## Contents
+
+- [Our Team](#our-team)
+- [Research Gap](#research-gaps-that-we-found)
+- [Our Contribution](#our-contribution)
+- [Datasets](#datasets-we-used-in-this-study)
+- [Project Database](#project-dataset-repository--onedrive-access)
+
 ## Our team:
 Yiyi He, Georgia Tech<br>
 Jun Rentschler, The World Bank<br>
