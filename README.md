@@ -74,9 +74,9 @@ The spatial raster dataset depicts the distribution of residential population, e
     - Filename: *"sampled_network_lite_elev_gpkg.zip"*
 
 ## Additional supporting datasets
-1. <ins>U.S. Census Blocks</ins> <br>
-Utilizing National Geospatial Data Asset (NGDA) data from the U.S. Census Bureau, this dataset includes Census Blocks in the United States. Blocks are statistical areas bounded by visible features, non-visible boundaries, and short line-of-sight extensions.<br>
-Source: U.S. Census Bureau [[link]](https://hub.arcgis.com/datasets/d795eaa6ee7a40bdb2efeb2d001bf823_0/about)<br>
+1. <ins>U.S. Census Tracks</ins> <br>
+Utilizing National Geospatial Data Asset (NGDA) data from the U.S. Census Bureau, this dataset includes Census Tracts in the United States. Tracts are statistical areas bounded by visible features, non-visible boundaries, and short line-of-sight extensions.<br>
+Source: U.S. Census Bureau [[link]](https://catalog.data.gov/dataset/tiger-line-shapefile-2021-state-texas-census-tracts)<br>
 
 2. <ins>Dartmouth Flood Observatory</ins> <br>
 The Flood Observatory maintains a Global Active Archive of large flood events, 1985 to present. New major flood events are entered into this archive each week. A single GIS polygon for each event estimates the total area affected.<br>
