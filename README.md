@@ -72,6 +72,8 @@ The spatial raster dataset depicts the distribution of residential population, e
     - Folder: *"dry_OD_routing"*
 5. Sampled road networks (35 total) for elevation validation (file format: geopackage)
     - Filename: *"sampled_network_lite_elev_gpkg.zip"*
+6. Road closure coverage (Hurricane Harvey)
+    - Filename: "road_closure_fathom_match_percentage.csv"
 
 ## Additional supporting datasets
 1. <ins>U.S. Census Tracks</ins> <br>
