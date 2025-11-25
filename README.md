@@ -1,6 +1,6 @@
 # A global evaluation of flood impacts on urban road networks and human mobility
 
-![github profile img](supplementary/github_project_img.png)
+![github profile img](docs/supplementary/github_project_img.png)
 
 ## Contents
 
