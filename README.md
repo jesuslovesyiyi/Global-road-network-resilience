@@ -2,6 +2,7 @@
 
 ![github profile img](docs/supplementary/github_project_img.png)
 
+
 ## Contents
 
 - [Our Team](#our-team)
@@ -83,3 +84,10 @@ Source: U.S. Census Bureau [[link]](https://catalog.data.gov/dataset/tiger-line-
 2. <ins>Dartmouth Flood Observatory</ins> <br>
 The Flood Observatory maintains a Global Active Archive of large flood events, 1985 to present. New major flood events are entered into this archive each week. A single GIS polygon for each event estimates the total area affected.<br>
 Source: DFO [[link]](https://floodobservatory.colorado.edu/Events/2017USA4510/2017USA4510.html)
+
+## Environment/Dependencies
+To reproduce the computational environment used in this project, create the Conda environment from the included `environment.yml` file located in `docs/env/`.
+
+```bash
+conda env create -f docs/env/environment.yml
+conda activate global0  # use the environment name defined in the yml
