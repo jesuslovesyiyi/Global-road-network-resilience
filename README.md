@@ -1,4 +1,5 @@
 # A global evaluation of flood impacts on urban road networks and human mobility
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
 
 ![github profile img](docs/supplementary/github_project_img.png)
 
@@ -91,3 +92,8 @@ To reproduce the computational environment used in this project, create the Cond
 ```bash
 conda env create -f docs/env/environment.yml
 conda activate global0  # use the environment name defined in the yml
+```
+
+## License
+This project is licensed under the **BSD 3-Clause License**.  
+See the [LICENSE](LICENSE) file for details.
