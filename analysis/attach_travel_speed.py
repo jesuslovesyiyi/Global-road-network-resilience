@@ -98,8 +98,15 @@ if __name__ == "__main__":
         except KeyError:
             G_nj_flooded_speed.remove_edge(i, j)
 
-    with open(home_dir + '/01_public/Nanjing_validation/G_nj_flooded.pk', 'wb') as handle:
-    pickle.dump(G_nj_flooded, handle, protocol=2)
+    with open(home_dir + '/Nanjing_validation/G_nj_flooded.pk', 'wb') as handle:
+        pickle.dump(G_nj_flooded, handle, protocol=2)
 
-    with open(home_dir + '/01_public/Nanjing_validation/G_nj_flooded_speed.pk', 'wb') as handle:
-    pickle.dump(G_nj_flooded_speed, handle, protocol=2)
+    with open(home_dir + '/Nanjing_validation/G_nj_flooded_speed.pk', 'wb') as handle:
+        pickle.dump(G_nj_flooded_speed, handle, protocol=2)
+
+    # Add travel time (unit: seconds)
+    for i,j, data in G_nj_flooded_speed.edges.data():
+        data['travel_time'] = float(data['length'])/data['ms']
+
+    with open(home_dir + '/Nanjing_validation/G_nj_flooded_speed_time.pk', 'wb') as handle:
+        pickle.dump(G_nj_flooded_speed, handle, protocol=2)
