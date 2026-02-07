@@ -77,7 +77,7 @@ The spatial raster dataset depicts the distribution of residential population, e
 6. Road closure coverage (Hurricane Harvey)
     - Filename: "road_closure_fathom_match_percentage.csv"
 7. Country-level summaries of direct and indirect impact of floods on urban mobility
-    - Filename: "Perc_fail_exposure_RP100_30cm_by_country.csv"
+    - Filename: "Perc_fail_exposure_RP100_30cm_by_country.csv"<br>
     Description: This file contains the country-level direct exposure percentage [Column "ExpoPerc"] and indirect mobility disruption [Column "PercFail"] measured by share of trips failed. Flood return period selected was 100-year with inundation threshold set to 30 cm.
 ## Additional supporting datasets
 1. <ins>U.S. Census Tracks</ins> <br>
