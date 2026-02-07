@@ -63,7 +63,7 @@ The spatial raster dataset depicts the distribution of residential population, e
 [[Read more]](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)<br>
 
 ## Project Database – OneDrive Access
-[Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/EqT8fsXe8lFCqAlv-F0wrvYBbSk28cIUrIVlhRRU4vf0Iw?e=sl5qOz) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
+[Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/IgCk_H7F3vJRQqgJb_hdMK72AW0pNvHCFKyFZYUUVOL39CM?e=9JfzTD) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
 1. Original convex hull shapefiles(4299 polygons) 
     - Filename: *"4229_bnd_convex.zip"*
 2. Eight giant cluster boundaries
@@ -76,7 +76,9 @@ The spatial raster dataset depicts the distribution of residential population, e
     - Filename: *"sampled_network_lite_elev_gpkg.zip"*
 6. Road closure coverage (Hurricane Harvey)
     - Filename: "road_closure_fathom_match_percentage.csv"
-
+7. Country-level summaries of direct and indirect impact of floods on urban mobility
+    - Filename: "Perc_fail_exposure_RP100_30cm_by_country.csv"
+    Description: This file contains the country-level direct exposure percentage [Column "ExpoPerc"] and indirect mobility disruption [Column "PercFail"] measured by share of trips failed. Flood return period selected was 100-year with inundation threshold set to 30 cm.
 ## Additional supporting datasets
 1. <ins>U.S. Census Tracks</ins> <br>
 Utilizing National Geospatial Data Asset (NGDA) data from the U.S. Census Bureau, this dataset includes Census Tracts in the United States. Tracts are statistical areas bounded by visible features, non-visible boundaries, and short line-of-sight extensions.<br>
