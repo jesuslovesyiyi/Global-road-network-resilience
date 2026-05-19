@@ -1,3 +1,14 @@
+"""
+Attach raster-based flood depth information to road network nodes and edges.
+
+This script samples flood depth rasters at network nodes and along road
+segments, storing the maximum sampled depth as an attribute on each
+node and edge. The resulting network is saved as a GraphML file and
+optionally exported as a GeoDataFrame for GIS analysis.
+
+Intended for reproducible scientific workflows and public release.
+"""
+
 import geopandas as gpd
 from shapely.geometry import Polygon, Point, LineString
 import pandas as pd
@@ -18,15 +29,26 @@ from rasterio.windows import Window
 import pickle
 from shapely import wkt
 
+ 
 def attach_flood(src, G, rp):
     """
-    Attach flood depth values from the raster (`src`) to nodes and edges
-    of a NetworkX graph `G`.
+    Attach flood depth values from a raster to nodes and edges of a network.
 
-    Input:
-    - src: Open raster (flood depth) dataset.
-    - G: a NetworkX Graph for a road network.
-    - rp: Return period.
+    Parameters
+    ----------
+    src : rasterio.DatasetReader
+        Open raster dataset containing flood depth values.
+    G : networkx.MultiDiGraph
+        Road network graph with node coordinates stored as 'x' (lon) and
+        'y' (lat), and edge lengths stored as 'length'.
+    rp : int
+        Flood return period (e.g., 10, 50, 100), used in attribute naming.
+
+    Notes
+    -----
+    - Node flood depth is sampled at the node coordinate.
+    - Edge flood depth is defined as the maximum sampled depth along
+      interpolated points on the edge geometry.
     """
 
     # Metadata of the raster
