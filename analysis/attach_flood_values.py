@@ -5,8 +5,6 @@ This script samples flood depth rasters at network nodes and along road
 segments, storing the maximum sampled depth as an attribute on each
 node and edge. The resulting network is saved as a GraphML file and
 optionally exported as a GeoDataFrame for GIS analysis.
-
-Intended for reproducible scientific workflows and public release.
 """
 
 import geopandas as gpd

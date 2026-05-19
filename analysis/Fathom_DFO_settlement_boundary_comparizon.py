@@ -1,3 +1,21 @@
+"""
+Delineate flood-affected watershed boundaries and quantify historical
+settlement exposure to flooding using global flood and watershed data.
+
+This script integrates Global Flood Database (GFD) flood footprints,
+watershed boundary polygons, and settlement convex hulls to:
+(1) identify watersheds intersecting each flood event and merge them
+    into event-level inundated basin boundaries;
+(2) substitute original flood geometries with hydrologically meaningful
+    watershed extents where available;
+(3) compute settlement-level historical flood exposure based on the
+    proportion of hull area overlapping reported flood regions; and
+(4) export centroid-based settlement representations while preserving
+    original polygon geometries for downstream analysis.
+
+Spatial indexing and geometry validation are used throughout to improve
+computational efficiency and robustness.
+"""
 import glob
 import pandas as pd
 import geopandas as gpd
@@ -11,14 +29,17 @@ from tqdm import tqdm
 def extract_points_from_polygons(polygons):
     '''
     Extract centroid coordinates from a list of polygon geometries.
-    
+
+    This is primarily used for visualization purposes, allowing us to
+    plot representative points for each flood polygon.
+
     input:
-    - polygons:  a list of polygon geometries
+    - polygons: list of shapely Polygon geometries
 
     output:
-    - points_list: a list of centroid coordinates
-
+    - points_list: list of (x, y) centroid coordinate tuples
     '''
+
     points_list = []
     for poly in polygons:
         points_list.append((poly.centroid.x, poly.centroid.y))
@@ -26,7 +47,15 @@ def extract_points_from_polygons(polygons):
 
 def boundary_watershed():
     '''
-    Find the inundated watershed for each events with GFD data
+    Identify the watershed boundary associated with each flood event
+    using GFD flood footprints.
+
+    For each flood raster (DFO_*.tif):
+    1. Load corresponding flood footprint polygons
+    2. Identify all watersheds that intersect with the flood extent
+    3. Merge intersecting watersheds into a single boundary polygon
+    4. Save the merged watershed boundary
+    5. Generate a diagnostic plot for visual validation
     '''
 
     #  Load watershed boundaries and shrink them slightly to reduce edge noise.
@@ -98,10 +127,11 @@ def boundary_watershed():
 
 def substitue(dfo):
     '''
-    Substitue the geometry to the boundary of watersheds if it exists
+    Replace original DFO flood geometries with corresponding
+    watershed boundary geometries when available.
 
     input:
-    - dfo: GeoDataFrame of DFO dataset
+    - dfo: GeoDataFrame containing DFO flood events
     '''
     for i in tqdm(dfo.index):
         id = dfo['ID'][i]
@@ -119,19 +149,20 @@ def substitue(dfo):
 
 def proportion(dfo, hulls, merged_polygon):
     '''
-    Check the proportion of the settlement’s area that has historically
-    overlapped with reported flood-affected regions.
-    
-    input:
-    - dfo: GeoDataFrame of DFO flood dataset.
-    - hulls: GeoDataFrame of settlement convex hulls.
-    - merged_polygon: shapely Polygon of global land area.
-    
-    Computes historical flood exposure for each hull and adds fields:
-    - 'covered' (max overlap)
-    - 'avg_covered' (mean overlap)
-    - 'count' (# events)
+    Compute historical flood exposure for each settlement hull.
 
+    For each settlement:
+    - Restrict analysis to land area
+    - Identify intersecting flood events
+    - Compute:
+        * Maximum fractional overlap (covered)
+        * Average fractional overlap (avg_covered)
+        * Number of flood events (count)
+
+    input:
+    - dfo: GeoDataFrame of flood polygons
+    - hulls: GeoDataFrame of settlement convex hulls
+    - merged_polygon: shapely Polygon of global land area
     '''
     ratios = []
     avg_ratios = []
@@ -183,12 +214,15 @@ def proportion(dfo, hulls, merged_polygon):
     hulls['count'] = counts
 
 def save_with_centroid(gdf):
-    """
-    Save hulls with centroid geometry instead of polygon geometry.
+    '''
+    Save settlement data using centroid geometry instead of polygons.
+
+    The original polygon geometry is preserved as a WKT string,
+    allowing lightweight storage and easier downstream use.
 
     input:
-    - dfo: GeoDataFrame of with polygon as geometry.
-    """
+    - gdf: GeoDataFrame with polygon geometries
+    '''
 
     gdf["polygon"] = gdf.geometry
 
@@ -205,13 +239,15 @@ def save_with_centroid(gdf):
 
 if __name__ == "__main__":
 
-    # find the inundated watershed for each events with GFD data
+    # Step 1: Identify watershed boundaries for each flood event
     boundary_watershed()
 
+    # Step 2: Load DFO flood data and substitute geometries when possible
     dfo = gpd.read_file("dfo_2025").to_crs("EPSG:4326")
     # substitue the geometry to the boundary of watersheds if it exists
     substitue(dfo)
 
+    # Step 3: Construct global land boundary polygon
     # get the land boundary
     all_gdf = pd.DataFrame()
     for fn in glob.glob("WB_regions_polygons/*.shp"):
@@ -219,11 +255,12 @@ if __name__ == "__main__":
         all_gdf = pd.concat([all_gdf, gdf], axis=0)
     merged_polygon = all_gdf.geometry.unary_union
 
+    # Step 4: Compute historical flood exposure for settlements
     # check the portion of the settlement’s area that has historically
     # overlapped with reported flood-affected regions.
     hulls = gpd.read_file("convex_hulls_global").to_crs("EPSG:4326")
     proportion(dfo, hulls, merged_polygon)
 
-
+    # Step 5: Save centroid-based settlement dataset
     # find the settlements' centroid and save
     save_with_centroid(hulls)

@@ -1,9 +1,30 @@
-# Function to extract highway types from OSM roads
+"""
+Assign speed limits and travel times to OSM road network edges based on
+highway classification.
+
+This script parses heterogeneous OSM 'highway' tags, assigns free-flow
+speeds (m/s) using a reference dictionary, removes unsupported road
+types, and computes edge-level travel times.
+"""
+
 import ast
 import networkx as nx
 import pickle
 
 def extract_highway(items):
+    """
+    Normalize a list of OSM highway attributes into a flat list of strings.
+
+    Parameters
+    ----------
+    items : iterable
+        Collection of highway attribute values (strings, lists, or list-strings).
+
+    Returns
+    -------
+    list
+        Flattened list of highway type strings.
+    """    
     result = []
     for item in items:
         if isinstance(item, str):
@@ -35,7 +56,11 @@ def extract_highway(items):
     return result
 
 def extract_types(item):
-    """Return a list of candidate highway types from either a string or a '[...]' string."""
+    """
+    Return a list of candidate highway types from a single highway attribute.
+
+    Handles both plain strings and string-encoded lists.
+    """
     if isinstance(item, str) and item.startswith("[") and item.endswith("]"):
         try:
             return ast.literal_eval(item)   # safely parse list-like string
@@ -44,7 +69,21 @@ def extract_types(item):
     return [item]  # plain string
 
 def pick_highway_type(item, lookup_dict):
-    """Return the first type in `item` that appears in lookup_dict, or None."""
+    """
+    Select the first highway type that appears in the reference speed dictionary.
+
+    Parameters
+    ----------
+    item : str | list
+        Raw highway attribute from OSM.
+    lookup_dict : dict
+        Dictionary mapping highway types to reference speeds.
+
+    Returns
+    -------
+    str or None
+        Matched highway type, or None if no match is found.
+    """
     candidates = extract_types(item)
     for t in candidates:
         if t in highway_ms_dict.keys():
@@ -64,7 +103,9 @@ if __name__ == "__main__":
     highway_class_lst = []
     for item in highway_class_dict.values():
         highway_class_lst.append(item)
-
+    
+    # Reference free-flow speeds by OSM highway class (units: m/s)
+    # Values correspond to typical design speeds
     highway_ms_dict = {
         'motorway': 33.33, # m/s =120mph
         'motorway_link': 33.33, #m/s =120mph
@@ -83,6 +124,7 @@ if __name__ == "__main__":
         highway = data['highway']
         highway_type = pick_highway_type(highway, highway_ms_dict)
         
+        # Skip road segments without a recognized highway type
         if highway_type == None:
             continue
         else:
@@ -91,13 +133,15 @@ if __name__ == "__main__":
 
     # Remove edges that does not have 'ms' speed attribute, that is the road types does not belong to the highway speed reference dict
     G_nj_flooded_speed = G_nj_flooded.copy()
+
     # Check if all edges have speed
     for i,j,data in G_nj_flooded.edges.data():
         try:
             a = data['ms']
         except KeyError:
             G_nj_flooded_speed.remove_edge(i, j)
-
+    
+    # Save intermediate graphs
     with open(home_dir + '/Nanjing_validation/G_nj_flooded.pk', 'wb') as handle:
         pickle.dump(G_nj_flooded, handle, protocol=2)
 
@@ -107,6 +151,7 @@ if __name__ == "__main__":
     # Add travel time (unit: seconds)
     for i,j, data in G_nj_flooded_speed.edges.data():
         data['travel_time'] = float(data['length'])/data['ms']
-
+    
+    # Save final graph with travel time attribute
     with open(home_dir + '/Nanjing_validation/G_nj_flooded_speed_time.pk', 'wb') as handle:
         pickle.dump(G_nj_flooded_speed, handle, protocol=2)
