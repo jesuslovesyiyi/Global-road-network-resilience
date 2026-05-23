@@ -15,6 +15,9 @@ watershed boundary polygons, and settlement convex hulls to:
 
 Spatial indexing and geometry validation are used throughout to improve
 computational efficiency and robustness.
+
+Documentation Note: Portions of this documentation were drafted with the assistance of Claude (Anthropic)
+and subsequently reviewed, edited, and verified for technical accuracy by the authors.
 """
 import glob
 import pandas as pd

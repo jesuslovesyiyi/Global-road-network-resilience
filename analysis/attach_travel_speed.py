@@ -5,6 +5,9 @@ highway classification.
 This script parses heterogeneous OSM 'highway' tags, assigns free-flow
 speeds (m/s) using a reference dictionary, removes unsupported road
 types, and computes edge-level travel times.
+
+Documentation Note: Portions of this documentation were drafted with the assistance of Claude (Anthropic)
+and subsequently reviewed, edited, and verified for technical accuracy by the authors.
 """
 
 import ast

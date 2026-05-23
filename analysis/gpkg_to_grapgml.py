@@ -8,6 +8,9 @@ non-spatial attributes to NetworkX-compatible formats. Geometry objects
 are serialized as WKT strings, invalid or empty attributes are removed,
 and the resulting graph is exported as a GraphML file for downstream
 network analysis.
+
+Documentation Note: Portions of this documentation were drafted with the assistance of Claude (Anthropic)
+and subsequently reviewed, edited, and verified for technical accuracy by the authors.
 """
 from tqdm import tqdm
 import pandas as pd

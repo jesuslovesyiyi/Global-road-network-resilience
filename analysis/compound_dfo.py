@@ -54,6 +54,9 @@ Summary CSV (all processed events)
  
 Summary CSV (events intersecting the 2,566 study-area hulls)
     dfo_compound_stats_in_2566.csv
+
+Documentation Note: Portions of this documentation were drafted with the assistance of Claude (Anthropic)
+and subsequently reviewed, edited, and verified for technical accuracy by the authors.
 """
 import argparse
 import numpy as np
