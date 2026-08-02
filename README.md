@@ -63,7 +63,7 @@ The spatial raster dataset depicts the distribution of residential population, e
 [[Read more]](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)<br>
 
 ## Project Database – OneDrive Access
-[Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/IgCk_H7F3vJRQqgJb_hdMK72AW0pNvHCFKyFZYUUVOL39CM?e=HZ4c0I) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
+[Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/IgCk_H7F3vJRQqgJb_hdMK72AW0pNvHCFKyFZYUUVOL39CM?e=HTlz1p) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
 1. Original convex hull shapefiles(4299 polygons) 
     - Filename: *"4229_bnd_convex.zip"*
 2. Eight giant cluster boundaries
@@ -86,7 +86,7 @@ Source: U.S. Census Bureau [[link]](https://catalog.data.gov/dataset/tiger-line-
 
 2. <ins>Dartmouth Flood Observatory</ins> <br>
 The Flood Observatory maintains a Global Active Archive of large flood events, 1985 to present. New major flood events are entered into this archive each week. A single GIS polygon for each event estimates the total area affected.<br>
-Source: DFO [[link]](https://floodobservatory.colorado.edu/Events/2017USA4510/2017USA4510.html)
+Source: DFO [[link]](https://floodobservatory.colorado.edu/wiki/Main_Page)
 
 ## Environment/Dependencies
 To reproduce the computational environment used in this project, create the Conda environment from the included `environment.yml` file located in `docs/env/`.
