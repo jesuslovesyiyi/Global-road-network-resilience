@@ -20,10 +20,6 @@ Zhengyang Wei, Stanford University<br>
 Jianxi Gao, Rensselaer Polytechnic Institute<br>
 Jenny Suckale, Stanford University<br>
 
-## Instructions
-
-# Installation
-
 ## Research gaps that we found:
 
 Anthropogenic climate change and rapid urbanization, combined with increasing interdependencies among various critical infrastructure systems, are forcing road transportation networks under climatic pressure more than ever in human history. With the European floods as the backdrop, we have witnessed the growing fragility and interconnectivity of road infrastructure networks in the face of catastrophic events. Although three decades of studies attempted to understand the infrastructure vulnerability and flood risks, we discovered two gaps that prohibit us from building a solid understanding of the real impact of flood hazards and generating climate solutions that are genuinely effective after a thorough literature review.
