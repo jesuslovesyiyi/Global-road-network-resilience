@@ -43,3 +43,5 @@ Thumbs.db
 ##################
 
 analysis/data/
+analysis/__pycache__/
+analysis/.ipynb_checkpoints/
