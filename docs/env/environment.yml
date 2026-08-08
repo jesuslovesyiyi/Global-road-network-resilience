@@ -4,76 +4,70 @@ channels:
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
-  - aom=3.12.1=ha237518_0
-  - blas=1.0=openblas
-  - bottleneck=1.4.2=py312h03d0aa3_1
-  - bzip2=1.0.8=h80987f9_6
-  - ca-certificates=2025.11.4=hca03da5_0
-  - cairo=1.18.4=h191e429_0
-  - certifi=2025.11.12=py312hca03da5_0
-  - contourpy=1.3.3=py312h20e30b6_0
-  - cycler=0.11.0=pyhd3eb1b0_0
-  - dav1d=1.2.1=h80987f9_0
-  - expat=2.7.3=h982b769_0
-  - fontconfig=2.15.0=h29935d0_0
-  - fonttools=4.60.1=py312h254cc4a_0
-  - freetype=2.13.3=h47d26ad_0
-  - fribidi=1.0.10=h1a28f6b_0
-  - gettext=0.21.0=hbdbcc25_2
-  - graphite2=1.3.14=hc377ac9_1
-  - harfbuzz=10.2.0=he637ebf_1
-  - icu=73.1=h313beb8_0
-  - jpeg=9f=h2f69dba_0
-  - kiwisolver=1.4.8=py312h313beb8_0
-  - lcms2=2.16=he26ebf3_1
-  - lerc=4.0.0=h313beb8_0
-  - libavif=1.1.1=h96d1633_1
-  - libcxx=20.1.8=hd7fd590_1
-  - libdeflate=1.22=h80987f9_0
-  - libffi=3.4.4=hca03da5_1
-  - libgfortran=5.0.0=11_3_0_hca03da5_28
-  - libgfortran5=11.3.0=h009349e_28
-  - libglib=2.84.4=h7a3292d_0
-  - libiconv=1.16=h80987f9_3
-  - libopenblas=0.3.30=hf2bb037_0
-  - libopenjpeg=2.5.4=haa24f5a_1
-  - libpng=1.6.50=h5c318fc_0
-  - libtiff=4.7.0=h91aec0a_0
-  - libwebp-base=1.3.2=h80987f9_1
-  - libxml2=2.13.9=h528a072_0
-  - libzlib=1.3.1=h5f15de7_0
-  - llvm-openmp=20.1.8=he822017_0
-  - lz4-c=1.9.4=h313beb8_1
-  - matplotlib=3.10.6=py312hca03da5_1
-  - matplotlib-base=3.10.6=py312h37b8ce2_1
-  - ncurses=6.5=hee39554_0
-  - numexpr=2.14.1=py312h5fbe615_0
-  - numpy=2.3.4=py312hc95ac1c_0
-  - numpy-base=2.3.4=py312h8087a70_0
-  - openssl=3.0.18=h9b4081a_0
-  - pandas=2.3.3=py312h3f644e9_1
-  - pcre2=10.46=h1dacb4a_0
-  - pillow=12.0.0=py312he2d6fe4_1
-  - pip=25.2=pyhc872135_1
-  - pixman=0.46.4=h09dc60e_0
-  - pyparsing=2.4.7=pyhd3eb1b0_0
-  - python=3.12.12=h2bfc596_1
-  - python-dateutil=2.9.0post0=py312hca03da5_2
-  - python-tzdata=2025.2=pyhd3eb1b0_0
-  - pytz=2025.2=py312hca03da5_0
-  - readline=8.3=h0b18652_0
-  - scipy=1.16.3=py312h08a1045_0
-  - seaborn=0.13.2=py312hca03da5_3
-  - setuptools=80.9.0=py312hca03da5_0
-  - six=1.17.0=py312hca03da5_0
-  - sqlite=3.50.2=h79febb2_1
-  - tk=8.6.15=hcd8a7d5_0
-  - tqdm=4.67.1=py312h989b03a_0
-  - tzdata=2025b=h04d1e81_0
-  - wheel=0.45.1=py312hca03da5_0
-  - xz=5.6.4=h80987f9_1
-  - zlib=1.3.1=h5f15de7_0
-  - zstd=1.5.7=h817c040_0
+  - aom=3.12.1
+  - blas=1.0
+  - bottleneck=1.4.2
+  - bzip2=1.0.8
+  - ca-certificates
+  - cairo=1.18.4
+  - certifi=2025.11.12
+  - contourpy=1.3.3
+  - cycler=0.11.0
+  - dav1d=1.2.1
+  - expat=2.7.3
+  - fontconfig=2.15.0
+  - fonttools=4.60.1
+  - freetype=2.13.3
+  - fribidi=1.0.10
+  - graphite2=1.3.14
+  - harfbuzz=10.2.0
+  - icu=73.1
+  - jpeg=9f
+  - kiwisolver=1.4.8
+  - lcms2=2.16
+  - lerc=4.0.0
+  - libavif=1.1.1
+  - libdeflate=1.22
+  - libffi=3.4.4
+  - libglib=2.84.4
+  - libiconv=1.16
+  - libopenblas=0.3.30
+  - libopenjpeg=2.5.4
+  - libpng=1.6.50
+  - libtiff=4.7.0
+  - libwebp-base=1.3.2
+  - libxml2=2.13.9
+  - libzlib=1.3.1
+  - llvm-openmp=20.1.8
+  - lz4-c=1.9.4
+  - matplotlib=3.10.6
+  - matplotlib-base=3.10.6
+  - numexpr=2.14.1
+  - numpy=2.3.4
+  - numpy-base=2.3.4
+  - openssl=3.0.18
+  - pandas=2.3.3
+  - pcre2=10.46
+  - pillow=12.0.0
+  - pip=25.2
+  - pixman=0.46.4
+  - pyparsing=2.4.7
+  - python=3.12.12
+  - python-dateutil=2.9.0post0
+  - python-tzdata=2025.2
+  - pytz=2025.2
+  - scipy=1.16.3
+  - seaborn=0.13.2
+  - setuptools=80.9.0
+  - six=1.17.0
+  - sqlite=3.50.2
+  - tk=8.6.15
+  - tqdm=4.67.1
+  - tzdata=2025b
+  - wheel=0.45.1
+  - xz=5.6.4
+  - zlib=1.3.1
+  - zstd=1.5.7
   - pip:
       - appnope==0.1.4
       - asttokens==3.0.0
@@ -90,7 +84,9 @@ dependencies:
       - jedi==0.19.2
       - jupyter-client==8.6.3
       - jupyter-core==5.9.1
+      - kaleido==1.3.0
       - matplotlib-inline==0.2.1
+      - nbformat==5.10.4
       - nest-asyncio==1.6.0
       - networkx==3.5
       - osmnx==2.0.6
@@ -98,6 +94,7 @@ dependencies:
       - parso==0.8.5
       - pexpect==4.9.0
       - platformdirs==4.5.0
+      - plotly==6.9.0
       - prompt-toolkit==3.0.52
       - psutil==7.1.3
       - ptyprocess==0.7.0

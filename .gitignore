@@ -38,3 +38,10 @@ Thumbs.db
 
 
 .Rhistory
+
+# Data directory #
+##################
+
+analysis/data/
+analysis/__pycache__/
+analysis/.ipynb_checkpoints/
