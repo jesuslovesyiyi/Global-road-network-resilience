@@ -20,10 +20,6 @@ Zhengyang Wei, Stanford University<br>
 Jianxi Gao, Rensselaer Polytechnic Institute<br>
 Jenny Suckale, Stanford University<br>
 
-## Instructions
-
-# Installation
-
 ## Research gaps that we found:
 
 Anthropogenic climate change and rapid urbanization, combined with increasing interdependencies among various critical infrastructure systems, are forcing road transportation networks under climatic pressure more than ever in human history. With the European floods as the backdrop, we have witnessed the growing fragility and interconnectivity of road infrastructure networks in the face of catastrophic events. Although three decades of studies attempted to understand the infrastructure vulnerability and flood risks, we discovered two gaps that prohibit us from building a solid understanding of the real impact of flood hazards and generating climate solutions that are genuinely effective after a thorough literature review.
@@ -67,7 +63,7 @@ The spatial raster dataset depicts the distribution of residential population, e
 [[Read more]](https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php)<br>
 
 ## Project Database – OneDrive Access
-[Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/IgCk_H7F3vJRQqgJb_hdMK72AW0pNvHCFKyFZYUUVOL39CM?e=HZ4c0I) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
+[Click here](https://gtvault-my.sharepoint.com/:f:/g/personal/yhe603_gatech_edu/IgCk_H7F3vJRQqgJb_hdMK72AW0pNvHCFKyFZYUUVOL39CM?e=HTlz1p) to access the project datasets associated with this project. Below is a list of what is stored inside the shared folder. If you have any questions, need additional information, or encounter any issues, please don’t hesitate to get in touch. You can reach us by sending an email to yiyi.he@design.gatech.edu—just include your name, affiliation, and a brief description of your inquiry so we can assist you more effectively.
 1. Original convex hull shapefiles(4299 polygons) 
     - Filename: *"4229_bnd_convex.zip"*
 2. Eight giant cluster boundaries
@@ -83,6 +79,13 @@ The spatial raster dataset depicts the distribution of residential population, e
 7. Country-level summaries of direct and indirect impact of floods on urban mobility
     - Filename: "Perc_fail_exposure_RP100_30cm_by_country.csv"<br>
     - Description: This file contains the country-level direct exposure percentage [Column "ExpoPerc"] and indirect mobility disruption [Column "PercFail"] measured by share of trips failed. Flood return period selected was 100-year with inundation threshold set to 30 cm.
+
+## Reproducing major figures
+
+For simplicity, we have summarized all the code necessary to reproduce the figures found in the manuscript in the notebook `analysis\00_Generate_all_plots.ipynb`. This notebook is divided into clear section denoting the figure each section will reproduce. By default, this notebook will assume the data directory is located in analysis folder (`analysis\data\`). To use a different folder modify `analysis\config.json` to point to the location of the data.
+
+Several major plots in the manuscripts are not reproducible through code along and were generated through specialized software such as GIS. 
+
 ## Additional supporting datasets
 1. <ins>U.S. Census Tracks</ins> <br>
 Utilizing National Geospatial Data Asset (NGDA) data from the U.S. Census Bureau, this dataset includes Census Tracts in the United States. Tracts are statistical areas bounded by visible features, non-visible boundaries, and short line-of-sight extensions.<br>
@@ -90,7 +93,7 @@ Source: U.S. Census Bureau [[link]](https://catalog.data.gov/dataset/tiger-line-
 
 2. <ins>Dartmouth Flood Observatory</ins> <br>
 The Flood Observatory maintains a Global Active Archive of large flood events, 1985 to present. New major flood events are entered into this archive each week. A single GIS polygon for each event estimates the total area affected.<br>
-Source: DFO [[link]](https://floodobservatory.colorado.edu/Events/2017USA4510/2017USA4510.html)
+Source: DFO [[link]](https://floodobservatory.colorado.edu/wiki/Main_Page)
 
 ## Environment/Dependencies
 To reproduce the computational environment used in this project, create the Conda environment from the included `environment.yml` file located in `docs/env/`.
