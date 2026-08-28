@@ -84,7 +84,7 @@ The spatial raster dataset depicts the distribution of residential population, e
 
 For simplicity, we have summarized all the code necessary to reproduce the figures found in the manuscript in the notebook `analysis\00_Generate_all_plots.ipynb`. This notebook is divided into clear section denoting the figure each section will reproduce. By default, this notebook will assume the data directory is located in analysis folder (`analysis\data\`). To use a different folder modify `analysis\config.json` to point to the location of the data.
 
-Several major plots in the manuscripts are not reproducible through code along and were generated through specialized software such as GIS. 
+Several major plots in the manuscripts are not reproducible through code along and were generated through [ArcGIS Pro](https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview) and [QGIS](https://www.qgis.org/). 
 
 ## Additional supporting datasets
 1. <ins>U.S. Census Tracks</ins> <br>
