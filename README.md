@@ -29,7 +29,7 @@ Anthropogenic climate change and rapid urbanization, combined with increasing in
 
 ## Our contribution:
 
-In this study, we provide the first global evaluation of direct and, more importantly, indirect flood impact on road networks for <span style="color:navy">**2,564**</span> human settlements representing over <span style="color:navy">**14 million kilometers**</span> of road networks spanning <span style="color:navy">**177 countries**</span> and regions under ten flood intensities. The main contributions of our study are threefold:
+In this study, we provide the first global evaluation of direct and, more importantly, indirect flood impact on road networks for <span style="color:navy">**2,564**</span> human settlements representing over <span style="color:navy">**14 million kilometers**</span> of road networks spanning <span style="color:navy">**162 countries**</span> and regions under ten flood intensities. The main contributions of our study are threefold:
 
 1.	We look <ins>beyond infrastructure exposure</ins> and simulate the impact of floods on <ins>mobility</ins> concerning road transportation networks <ins>worldwide</ins>, comparing and contrasting network resilience between countries and regions worldwide.
 
